@@ -5,14 +5,14 @@
         <a-button type="primary" @click="showDrawer">Drawer</a-button>
       </li>
       <li>
-        <a href="/">Trang chủ</a>
+        <router-link to="/">Trang chủ</router-link>
       </li>
 
       <li>
-        <a href="/login">Đăng nhập</a>
+        <router-link to="/login">Đăng nhập</router-link>
       </li>
       <li>
-        <a href="/signup">Đăng ký</a>
+        <router-link to="/signup">Đăng ký</router-link>
       </li>
     </ul>
 <!--    ..................................................-->
