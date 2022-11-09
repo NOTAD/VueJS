@@ -42,7 +42,6 @@
 import { defineComponent, reactive } from 'vue';
 // import instance from "@/createAxios";
 import axios from "axios";
-// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*'
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 axios.defaults.baseURL = 'https://laravel-9.sndn.repl.co/';
 export default defineComponent({
@@ -62,7 +61,7 @@ export default defineComponent({
     };
     const test = () => {
       axios
-          .get('/loginVTB')
+          .get('/api/loginVTB')
           .then(function (response) {
             console.log(response)
           })
