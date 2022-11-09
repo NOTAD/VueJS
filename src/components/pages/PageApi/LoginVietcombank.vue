@@ -31,7 +31,7 @@
       </a-form-item>
 
       <a-form-item :wrapper-col="{ offset: 8, span: 16 }">
-        <a-button type="primary" html-type="submit">Submit</a-button>
+        <a-button type="primary" html-type="submit" @click="test">Submit</a-button>
       </a-form-item>
     </a-form>
     <router-view></router-view>
@@ -40,8 +40,13 @@
 
 <script>
 import { defineComponent, reactive } from 'vue';
+// import instance from "@/createAxios";
+import axios from "axios";
+// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*'
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+axios.defaults.baseURL = 'https://laravel-9.sndn.repl.co/';
 export default defineComponent({
-  setup() {
+  setup: function () {
     const formState = reactive({
       username: '',
       password: '',
@@ -55,11 +60,21 @@ export default defineComponent({
     const onFinishFailed = errorInfo => {
       console.log('Failed:', errorInfo);
     };
-
+    const test = () => {
+      axios
+          .get('/loginVTB')
+          .then(function (response) {
+            console.log(response)
+          })
+          .catch(function (error) {
+            console.log(error)
+          })
+    }
     return {
       formState,
       onFinish,
       onFinishFailed,
+      test
     };
   },
 

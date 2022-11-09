@@ -8,16 +8,14 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import TheHeader from "@/components/layouts/TheHeader";
-
+// import axios from "axios";
 export default {
   name: 'App',
   components: {
-    // eslint-disable-next-line vue/no-unused-components
     TheHeader
   }
 }
 </script>
-
 <style>
 
 </style>
