@@ -43,7 +43,7 @@ import { defineComponent, reactive } from 'vue';
 // import instance from "@/createAxios";
 import axios from "axios";
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-axios.defaults.baseURL = 'https://laravel-9.sndn.repl.co/';
+axios.defaults.baseURL = 'https://beapp.notad.io/';
 export default defineComponent({
   setup: function () {
     const formState = reactive({

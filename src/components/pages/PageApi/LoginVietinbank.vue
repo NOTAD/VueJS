@@ -13,6 +13,9 @@
       <br/>
       <button type="button" @click="submit_form">Submit</button>
     </div>
+    <div>
+      <span>{{ketqua}}</span>
+    </div>
 
 
     <router-view></router-view>
@@ -22,12 +25,14 @@
 <script>
 import axios from "axios";
 axios.defaults.baseURL = 'https://beapp.notad.io/';
+
      export default {
        data() {
          return {
            account: "",
            password: "",
-           stk: ""
+           stk: "",
+           ketqua: "Chờ data"
 
          }
        },
@@ -40,15 +45,20 @@ axios.defaults.baseURL = 'https://beapp.notad.io/';
            let dataAcount = this.account
            let dataPassword = this.password
            let dataStk = this.stk
+
            console.log(dataPassword, dataAcount)
            axios
                .get('api/loginVTB?username=' + dataAcount + '&password=' + dataPassword + '&acc=' + dataStk)
                .then(function (response) {
+                this.ketqua = response
                  console.log(response)
                })
                .catch(function (error) {
                  console.log(error)
                })
+         },
+         changeData: function () {
+           this.ketqua = "Đang chờ response"
          }
        }
      }
