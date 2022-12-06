@@ -40,7 +40,7 @@
   <h3>Đăng nhập và kiểm tra lịch sử giao dịch có thể thực hiện trong 1 lần request.</h3>
   <h3>Chuyển tiền sẽ cần lấy OTP từ thiết bị thật hoặc máy ảo. Có thể sử dụng Python để adb thiết bị và POST OTP vào webhook</h3>
   <h2>Mã nguồn của API được viết bằng PHP</h2>
-  <h1>Giá của mỗi API là: 3.500.000đ</h1>
+  <h1>Giá của mỗi API là: 3.500.000đ. Bảo hành vĩnh viễn và hỗ trợ update mỗi khi ngân hàng thay đổi API.</h1>
 </template>
 
 <script>
